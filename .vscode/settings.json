@@ -14,6 +14,11 @@
     "regex": "cpp",
     "valarray": "cpp",
     "ranges": "cpp",
-    "span": "cpp"
+    "span": "cpp",
+    "iosfwd": "cpp",
+    "chrono": "cpp",
+    "random": "cpp",
+    "limits": "cpp",
+    "algorithm": "cpp"
   }
 }
