@@ -1,3 +1,9 @@
 # Leetcode-Solutions
 
-Solution of Leetcode Questions
+Solutions of Leetcode Questions
+
+Divided into three categories: 
+
+* Easy
+* Medium
+* Hard
