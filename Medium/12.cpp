@@ -1,26 +1,24 @@
 class Solution {
 public:
     
-    int max(int a, int b) {
-        return a ? a>b : b;
-    }
-    
     int lengthOfLongestSubstring(string s) {
-        int l=0;
-        set<int> st;
-        int dis=INT_MIN;
+        int n = s.length();
+        if(n == 0) return 0;
         
-        for(int r=0; r<s.length(); r++) {
-            
-            while(st.find(s[r]) != st.end()) {
-                // remove s[r] from set ans inc l
-                auto f = st.find(s[r]);
-                if(f != st.end()) st.erase(f);
+        int l=0, r=0;
+        set<char> st;
+        int dis=0;
+        
+        while(r<n) {
+            char ch = s[r];
+            while(st.count(ch)) {
+                st.erase(s[l]);
                 l++;
             }
             
+            st.insert(ch);
             dis = max(dis, r-l+1);
-            st.insert(s[r]);
+            r++;
         }
         return dis;
     }
