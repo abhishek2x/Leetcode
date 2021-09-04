@@ -23,9 +23,9 @@ public:
         int low = *min_element(wt.begin(), wt.end());
         int high = accumulate(wt.begin(), wt.end(), 0);
 
-        while(low<high) {
+        while(low<=high) {
             int mid = low + (high-low)/2;
-            if(ok(wt, mid, days)) high = mid;
+            if(ok(wt, mid, days)) high = mid-1;
             else low = mid+1;
         }
         return low;
