@@ -13,25 +13,20 @@
 class Solution {
 public:
     int ans;
-    int minTillNow;
     
-    void init() {
-        ans=0;
-        minTillNow=-1;
-    }
-    
-    void count_utility(TreeNode* root) {
+    void count_utility(TreeNode* root, int maxTillNow) {
         if(!root) return;
-        minTillNow = max(minTillNow, root->val);
         
-        if(root->val >= minTillNow) ans++;
-        count_utility(root->left);
-        count_utility(root->right);
+        if(root->val >= maxTillNow) ans++;
+        maxTillNow = max(maxTillNow, root->val);
+                         
+        count_utility(root->left, maxTillNow);
+        count_utility(root->right, maxTillNow);
     }
     
     int goodNodes(TreeNode* root) {
-        void();
-        count_utility(root);
+        ans=0;
+        count_utility(root, INT_MIN);
         return ans;
     }
 };
