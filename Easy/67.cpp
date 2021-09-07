@@ -39,7 +39,6 @@ public:
     TreeNode* increasingBST(TreeNode* root) {
         init();
         do_inorder(root);
-        return NULL;
         return flattened(inorder.size());
     }
 };
