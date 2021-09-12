@@ -37,6 +37,8 @@ public:
                     right.push_back(1);
         }
         
+        // checking distance with all leaf nodes
+        
         for(int i=0; i<left.size(); i++)
         {
             for(int j=0; j<right.size(); j++)
@@ -45,7 +47,9 @@ public:
                     cnt++;
             }
         }
-        
+
+        //merging the vectors and increasing their height from the upcoming node.
+
         int i = 0;
         for(int i=0; i<left.size(); i++) ++left[i];
         
