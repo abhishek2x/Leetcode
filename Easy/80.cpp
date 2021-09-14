@@ -1,4 +1,3 @@
-
 class Solution {
 public:
     int maxSubArray(vector<int>& A) {
