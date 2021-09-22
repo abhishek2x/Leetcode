@@ -19,7 +19,9 @@
     "chrono": "cpp",
     "random": "cpp",
     "limits": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "bitset": "cpp",
+    "utility": "cpp"
   },
   "editor.tabSize": 4,
   "editor.insertSpaces": true,
