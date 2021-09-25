@@ -5,8 +5,12 @@ public:
     {
         if (r < 0 || c < 0 || r >= g.size() || c >= g[r].size() || g[r][c] != cl)
             return;
+
         g[r][c] = -cl;
+
         dfs(g, r - 1, c, cl), dfs(g, r + 1, c, cl), dfs(g, r, c - 1, cl), dfs(g, r, c + 1, cl);
+
+        
         if (r > 0 && r < g.size() - 1 && c > 0 && c < g[r].size() - 1 && cl == abs(g[r - 1][c]) &&
             cl == abs(g[r + 1][c]) && cl == abs(g[r][c - 1]) && cl == abs(g[r][c + 1]))
             g[r][c] = cl;
