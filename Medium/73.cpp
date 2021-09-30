@@ -17,7 +17,7 @@ class UnionFind {
         if(a != parent[a]) return parent[a] = find(parent[a]);
         else return parent[a];
     }
-    
+     
     bool unite(char a, char b, char symbol) {
         char aGrp = find(a);
         char bGrp = find(b);
