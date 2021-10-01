@@ -33,6 +33,7 @@ public:
         graph g = buildGraph(numCourses, prerequisites);
         vector<int> order;
         vector<bool> todo(numCourses, false), done(numCourses, false);
+        
         for (int i = 0; i < numCourses; i++) {
             if (!done[i] && !acyclic(g, todo, done, i, order)) {
                 return {};
