@@ -1,27 +1,34 @@
-// You are using GCC
+class Solution
+{
+public:
+    int maxDistance(vector<vector<int>> &g, int steps = 0)
+    {
 
-#include <bits/stdc++.h>
-using namespace std;
+        queue<pair<int, int>> q, q1;
 
-int main () {
-    int L, B;
-    cin >> L >> B;
-    
-    int l1, b1, l2, b2;
-    cin >> l1 >> b1 >> l2 >> b2;
-    
-    if(l1>L || l2>L || b1>B || b2>B) {
-        cout << "Leonardo cannot fix both painting";
+        for (auto i = 0; i < g.size(); ++i)
+            for (auto j = 0; j < g[i].size(); ++j)
+                if (g[i][j] == 1)
+                    q.push({i - 1, j}), q.push({i + 1, j}), q.push({i, j - 1}), q.push({i, j + 1});
+
+        while (!q.empty())
+        {
+            ++steps;
+            while (!q.empty())
+            {
+                int i = q.front().first;
+                int j = q.front().second;
+                q.pop();
+                
+                if (i >= 0 && j >= 0 && i < g.size() && j < g[i].size() && g[i][j] == 0)
+                {
+                    g[i][j] = steps;
+                    q1.push({i - 1, j}), q1.push({i + 1, j}), q1.push({i, j - 1}), q1.push({i, j + 1});
+                }
+            }
+            swap(q1, q);
+        }
+
+        return steps == 1 ? -1 : steps - 1;
     }
-    else if(l1+l2 > L && b1 + b2 > B) {
-        cout << "Leonardo cannot fix both painting";
-    }
-    else {
-        int a1 = l1*b1;
-        int a2 = l2*b2;
-        int A = L*B;
-        
-        if(A < a1+a2) cout << "Leonardo cannot fix both painting";
-        else cout << "Leonardo can fix both painting";
-    }
-}
+};
