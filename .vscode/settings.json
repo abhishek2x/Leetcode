@@ -21,7 +21,8 @@
     "limits": "cpp",
     "algorithm": "cpp",
     "bitset": "cpp",
-    "utility": "cpp"
+    "utility": "cpp",
+    "iostream": "cpp"
   },
   "editor.tabSize": 4,
   "editor.insertSpaces": true,
