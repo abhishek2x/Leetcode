@@ -1,4 +1,4 @@
 git status
 git add .
-git commit -m "Automated git commit"
+git commit -m "Medium file creation"
 git push
