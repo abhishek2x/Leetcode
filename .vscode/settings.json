@@ -23,7 +23,8 @@
     "bitset": "cpp",
     "utility": "cpp",
     "iostream": "cpp",
-    "variant": "cpp"
+    "variant": "cpp",
+    "cstddef": "cpp"
   },
   "editor.tabSize": 4,
   "editor.insertSpaces": true,
