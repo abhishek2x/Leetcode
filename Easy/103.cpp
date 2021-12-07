@@ -1,12 +1,21 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
 class Solution {
 public:
-    int minCostToMoveChips(vector<int>& position) {
-        int e=0, o=0;
-        for(int ele: position) {
-            if(ele%2) o++;
-            else e++;
+    int getDecimalValue(ListNode* head) {
+        int res = 0;
+        while(head!=NULL) {
+            res = (res<<1) + head->val;
+            head = head->next;
         }
-        
-        return o<e ? o : e;
+        return res;
     }
 };
