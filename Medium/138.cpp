@@ -1,7 +1,8 @@
 class StreamChecker {
 public:
     StreamChecker(vector<string>& words) {
-        // insert reversed word into trie and keep track of the length of longest word
+        // insert reversed word into trie and keep 
+        // track of the length of longest word
         for (auto& word: words) 
         {
             trie.insert_reversed(word);
@@ -12,7 +13,9 @@ public:
     
     bool query(char letter) {
         queries.insert(queries.begin(), letter);
-        // keep in queries only the "longest word" last queries, because we don't need the other ones anymore
+        // keep in queries only the "longest word" last 
+        // queries, because we don't need the other ones 
+        // anymore
         if (queries.size() > longest_word)
             queries.pop_back();
         Trie* cur = &trie;
