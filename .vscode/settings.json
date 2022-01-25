@@ -24,7 +24,8 @@
     "utility": "cpp",
     "iostream": "cpp",
     "variant": "cpp",
-    "cstddef": "cpp"
+    "cstddef": "cpp",
+    "tuple": "cpp"
   },
   "editor.tabSize": 4,
   "editor.insertSpaces": true,
