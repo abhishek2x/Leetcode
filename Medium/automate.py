@@ -4,8 +4,7 @@ import time
 print("Script about to start in 2 sec")
 time.sleep(2)
 
-for i in range(152, 201):
-
+for i in range(169, 250):
     pg.hotkey('ctrl', 'n')
     time.sleep(1)
     pg.hotkey('ctrl', 's')
