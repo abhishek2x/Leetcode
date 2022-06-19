@@ -9,6 +9,16 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
+
+/*
+
+-1 => You need a camera
+0 => You have a camera
+1 => You are covered
+
+*/
+
 class Solution {
 public:
     
