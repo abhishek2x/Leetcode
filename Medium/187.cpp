@@ -13,7 +13,7 @@ public:
             swap(nums[index], nums[i]);
         }
     }
-        
+
     vector<vector<int>> permute(vector<int>& nums) {
         vector<vector<int>> res;
         _permute(0, nums, res);
