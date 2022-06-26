@@ -26,7 +26,9 @@
     "variant": "cpp",
     "cstddef": "cpp",
     "tuple": "cpp",
-    "*.tcc": "cpp"
+    "*.tcc": "cpp",
+    "cmath": "cpp",
+    "complex": "cpp"
   },
   "editor.tabSize": 4,
   "editor.insertSpaces": true,
